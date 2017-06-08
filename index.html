@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Convert to Roman Numerals</title>
+<script>
+function convertToRoman(number) {
+  var rnumerals = {M:1000,CM:900,D:500,CD:400,C:100,XC:90,L:50,XL:40,X:10,IX:9,V:5,IV:4,I:1},romanform = '',i;
+  for ( i in rnumerals ) {
+    while ( number >= rnumerals[i] ) {
+      romanform += i;
+      number -= rnumerals[i];
+    }
+  }
+  return romanform;
+}
+</script>
+<style>
+.submit {
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<h1>Convert Standard Numerals Into Roman Numerals</h1>
+<p>Enter any standard numeral into the form, and click the button.</p>
+<input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" id="inform">
+<input class="submit" type="submit" onclick="inform.value=convertToRoman(inform.value);">
+</body>
+</html>
