@@ -15,7 +15,7 @@ function convertToRoman(number) {
 }
 </script>
 <style>
-.submit {
+input[type=submit] {
   cursor: pointer;
 }
 </style>
@@ -24,6 +24,6 @@ function convertToRoman(number) {
 <h1>Convert Standard Numerals Into Roman Numerals</h1>
 <p>Enter any standard numeral into the form, and click the button.</p>
 <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" id="inform">
-<input class="submit" type="submit" onclick="inform.value=convertToRoman(inform.value);">
+<input type="submit" onclick="inform.value=convertToRoman(inform.value);">
 </body>
 </html>
